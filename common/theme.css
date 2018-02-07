@@ -3,8 +3,33 @@
   --color-background: #f8f8f8;
   --color-secondary: #62c7c7;
   --font-primary: "Lato", sans-serif;
+  --font-weight-bold: 600;
+  --font-weight-normal: 400;
 }
 
 html {
   font-family: var(--font-primary);
+}
+
+h1 {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  font-weight: var(--font-weight-bold);
+}
+
+h2, h4, a, blockquote, q {
+  font-weight: var(--font-weight-bold);
+}
+
+h3 {
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+}
+
+h5, h6 {
+  font-weight: var(--font-weight-normal);
+}
+
+a, cite {
+  color: var(--color-secondary);
 }
