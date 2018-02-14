@@ -3,33 +3,41 @@
   --color-background: #f8f8f8;
   --color-secondary: #62c7c7;
   --font-primary: "Lato", sans-serif;
-  --font-weight-bold: 600;
-  --font-weight-normal: 400;
+  --weight-bold: 600;
+  --weight-normal: 400;
 }
 
 html {
   font-family: var(--font-primary);
 }
 
-h1 {
-  background-color: var(--color-primary);
-  color: var(--color-background);
-  font-weight: var(--font-weight-bold);
+h1, h2 {
+  color: var(--color-primary);
+  weight: var(--weight-bold);
 }
 
-h2, h4, a, blockquote, q {
-  font-weight: var(--font-weight-bold);
+h4, a, blockquote, q {
+  weight: var(--weight-bold);
 }
 
-h3 {
+h4 {
   background-color: var(--color-secondary);
   color: var(--color-background);
 }
 
-h5, h6 {
+h6 {
+  color: var(--color-secondary);
+}
+
+h2, h5, h6 {
   font-weight: var(--font-weight-normal);
 }
 
 a, cite {
   color: var(--color-secondary);
+}
+
+mark {
+  background-color: var(--color-secondary);
+
 }
