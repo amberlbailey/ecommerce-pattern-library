@@ -21,3 +21,7 @@
   border-color: var(--color-secondary);
   color: var(--color-background);
 }
+
+.icon:hover {
+  shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
