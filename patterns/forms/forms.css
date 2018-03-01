@@ -1,0 +1,42 @@
+html {
+  font-family: sans-serif;
+}
+
+input,
+select,
+textarea {
+  width: 5em;
+  border: 2px solid #62c7c7;
+  cursor: pointer;
+}
+
+input {
+  width: 15em;
+  border: 2px solid #62c7c7;
+}
+
+.flag-optional {
+  color: #999;
+}
+
+.is-validated input:invalid,
+.is-validated input[type="checkbox"]:invalid + label::before {
+  border-color: #f33;
+}
+
+.error-message {
+  background-color: #62c7c7;
+  color: #fff;
+  max-width: 20em;
+}
+
+.error-message-highlighted {
+  background-color: #c33;
+  color: #fff;
+}
+
+.is-validated > .error-message:first-child,
+.is-validated input:invalid + .error-message,
+.is-validated input:invalid + label + .error-message {
+  display: block;
+}
