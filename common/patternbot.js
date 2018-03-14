@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library
- * @version 1519905791523
+ * @version 1521061706820
  */
-const patternManifest_1519905791522 = {
+const patternManifest_1521061706820 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -483,24 +483,67 @@ const patternManifest_1519905791522 = {
       "attributes": {
         "name": "Off The Hook",
         "fontUrl": "https://fonts.googleapis.com/css?family=Lato:400,700",
-        "backgroundColor": "#f8f8f8",
+        "backgroundColor": "var(--color-primary)",
         "accentColor": "#62c7c7",
-        "backgroundColour": "#f8f8f8",
+        "brand": {
+          "colours": {
+            "backgroundcolor": "var(--color-background)",
+            "backgroundColour": "#f8f8f8",
+            "hidePopOutButton": true,
+            "notResizable": true,
+            "hideCode": true,
+            "interfaceColours": {
+              "primary": 0,
+              "opposite": 255
+            }
+          },
+          "typefaces": {
+            "backgroundcolor": "var(--color-background)",
+            "backgroundColour": "#f8f8f8",
+            "hidePopOutButton": true,
+            "notResizable": true,
+            "hideCode": true,
+            "interfaceColours": {
+              "primary": 0,
+              "opposite": 255
+            }
+          }
+        },
+        "backgroundColour": "#1e2424",
         "accentColour": "#62c7c7",
         "interfaceColours": {
-          "primary": 0,
-          "opposite": 255
+          "primary": 255,
+          "opposite": 0
         }
       }
     },
     "icons": [
-      "cart",
+      "facebook",
       "cancel",
+      "cart",
+      "instagram",
+      "twitter",
+      "next",
+      "cancel",
+      "cart",
+      "facebook",
+      "instagram",
+      "logo-32",
+      "logo-16",
+      "logo-64",
+      "logo-256",
+      "next",
+      "twitter",
+      "cancel",
+      "cart",
+      "facebook",
+      "instagram",
+      "twitter",
       "next"
     ],
     "interfaceColours": {
-      "primary": 0,
-      "opposite": 255
+      "primary": 255,
+      "opposite": 0
     }
   },
   "patternLibFiles": {
@@ -527,7 +570,11 @@ const patternManifest_1519905791522 = {
       "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/banners",
       "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/buttons",
       "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/cards",
-      "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/forms"
+      "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/footers",
+      "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/forms",
+      "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/headers",
+      "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/navigation",
+      "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/sections"
     ],
     "pages": []
   },
@@ -577,14 +624,28 @@ const patternManifest_1519905791522 = {
           "namePretty": "Buttons",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/buttons/buttons.html",
           "localPath": "patterns/buttons/buttons.html",
-          "readme": {}
+          "readme": {
+            "backgroundcolor": "var(--color-background)",
+            "backgroundColour": "#f8f8f8",
+            "interfaceColours": {
+              "primary": 0,
+              "opposite": 255
+            }
+          }
         },
         {
           "name": "icons",
           "namePretty": "Icons",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/buttons/icons.html",
           "localPath": "patterns/buttons/icons.html",
-          "readme": {}
+          "readme": {
+            "backgroundcolor": "var(--color-background)",
+            "backgroundColour": "#f8f8f8",
+            "interfaceColours": {
+              "primary": 0,
+              "opposite": 255
+            }
+          }
         }
       ],
       "md": [
@@ -651,6 +712,28 @@ const patternManifest_1519905791522 = {
       ]
     },
     {
+      "name": "footers",
+      "namePretty": "Footers",
+      "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/footers",
+      "html": [
+        {
+          "name": "footers",
+          "namePretty": "Footers",
+          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/footers/footers.html",
+          "localPath": "patterns/footers/footers.html"
+        }
+      ],
+      "md": [],
+      "css": [
+        {
+          "name": "footers",
+          "namePretty": "Footers",
+          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/footers/footers.css",
+          "localPath": "patterns/footers/footers.css"
+        }
+      ]
+    },
+    {
       "name": "forms",
       "namePretty": "Forms",
       "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/forms",
@@ -660,28 +743,56 @@ const patternManifest_1519905791522 = {
           "namePretty": "Checkbox",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/forms/checkbox.html",
           "localPath": "patterns/forms/checkbox.html",
-          "readme": {}
+          "readme": {
+            "backgroundcolor": "var(--color-background)",
+            "backgroundColour": "#f8f8f8",
+            "interfaceColours": {
+              "primary": 0,
+              "opposite": 255
+            }
+          }
         },
         {
           "name": "quantity-picker",
           "namePretty": "Quantity picker",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/forms/quantity-picker.html",
           "localPath": "patterns/forms/quantity-picker.html",
-          "readme": {}
+          "readme": {
+            "backgroundcolor": "var(--color-background)",
+            "backgroundColour": "#f8f8f8",
+            "interfaceColours": {
+              "primary": 0,
+              "opposite": 255
+            }
+          }
         },
         {
           "name": "radio-buttons",
           "namePretty": "Radio buttons",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/forms/radio-buttons.html",
           "localPath": "patterns/forms/radio-buttons.html",
-          "readme": {}
+          "readme": {
+            "backgroundcolor": "var(--color-background)",
+            "backgroundColour": "#f8f8f8",
+            "interfaceColours": {
+              "primary": 0,
+              "opposite": 255
+            }
+          }
         },
         {
           "name": "text-inputs",
           "namePretty": "Text inputs",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/forms/text-inputs.html",
           "localPath": "patterns/forms/text-inputs.html",
-          "readme": {}
+          "readme": {
+            "backgroundcolor": "var(--color-background)",
+            "backgroundColour": "#f8f8f8",
+            "interfaceColours": {
+              "primary": 0,
+              "opposite": 255
+            }
+          }
         }
       ],
       "md": [
@@ -698,6 +809,123 @@ const patternManifest_1519905791522 = {
           "namePretty": "Forms",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/forms/forms.css",
           "localPath": "patterns/forms/forms.css"
+        }
+      ]
+    },
+    {
+      "name": "headers",
+      "namePretty": "Headers",
+      "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/headers",
+      "html": [
+        {
+          "name": "headers",
+          "namePretty": "Headers",
+          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/headers/headers.html",
+          "localPath": "patterns/headers/headers.html"
+        }
+      ],
+      "md": [
+        {
+          "name": "readme",
+          "namePretty": "Readme",
+          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/headers/README.md",
+          "localPath": "patterns/headers/README.md"
+        }
+      ],
+      "css": [
+        {
+          "name": "headers",
+          "namePretty": "Headers",
+          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/headers/headers.css",
+          "localPath": "patterns/headers/headers.css"
+        }
+      ]
+    },
+    {
+      "name": "navigation",
+      "namePretty": "Navigation",
+      "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/navigation",
+      "html": [
+        {
+          "name": "breadcrumbs",
+          "namePretty": "Breadcrumbs",
+          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/navigation/breadcrumbs.html",
+          "localPath": "patterns/navigation/breadcrumbs.html",
+          "readme": {
+            "backgroundcolor": "var(--color-background)",
+            "backgroundColour": "#f8f8f8",
+            "interfaceColours": {
+              "primary": 0,
+              "opposite": 255
+            }
+          }
+        },
+        {
+          "name": "next-and-previous-buttons",
+          "namePretty": "Next and previous buttons",
+          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/navigation/next-and-previous-buttons.html",
+          "localPath": "patterns/navigation/next-and-previous-buttons.html",
+          "readme": {
+            "backgroundcolor": "var(--color-background)",
+            "backgroundColour": "#f8f8f8",
+            "interfaceColours": {
+              "primary": 0,
+              "opposite": 255
+            }
+          }
+        }
+      ],
+      "md": [
+        {
+          "name": "readme",
+          "namePretty": "Readme",
+          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/navigation/README.md",
+          "localPath": "patterns/navigation/README.md"
+        }
+      ],
+      "css": [
+        {
+          "name": "navigation",
+          "namePretty": "Navigation",
+          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/navigation/navigation.css",
+          "localPath": "patterns/navigation/navigation.css"
+        }
+      ]
+    },
+    {
+      "name": "sections",
+      "namePretty": "Sections",
+      "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/sections",
+      "html": [
+        {
+          "name": "banner-like-sections",
+          "namePretty": "Banner like sections",
+          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/sections/banner-like-sections.html",
+          "localPath": "patterns/sections/banner-like-sections.html",
+          "readme": {
+            "backgroundcolor": "var(--color-background)",
+            "backgroundColour": "#f8f8f8",
+            "interfaceColours": {
+              "primary": 0,
+              "opposite": 255
+            }
+          }
+        }
+      ],
+      "md": [
+        {
+          "name": "readme",
+          "namePretty": "Readme",
+          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/sections/README.md",
+          "localPath": "patterns/sections/README.md"
+        }
+      ],
+      "css": [
+        {
+          "name": "section",
+          "namePretty": "Section",
+          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/sections/section.css",
+          "localPath": "patterns/sections/section.css"
         }
       ]
     }
@@ -722,5 +950,5 @@ const patternManifest_1519905791522 = {
   }
 };
 
-patternBotIncludes(patternManifest_1519905791522);
+patternBotIncludes(patternManifest_1521061706820);
 }());
