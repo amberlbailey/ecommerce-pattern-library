@@ -18,7 +18,3 @@ h1 {
     border-color: var(--color-secondary);
     color: var(--color-background);
 }
-
-.divide {
-  background-color: var(--color-secondary);
-}
