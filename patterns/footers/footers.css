@@ -1,0 +1,51 @@
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: var(--color-primary);
+  text-align: center;
+}
+
+p {
+  color: var(--color-background);
+}
+
+#facebook {
+  color: var(--color-secondary);
+
+}
+
+.social {
+  display: inline-block;
+  color: var(--color-secondary);
+}
+
+.facebook:hover {
+  color: var(--color-background);
+  cursor: pointer;
+}
+
+.twitter:hover {
+  color: var(--color-background);
+  cursor: pointer;
+}
+
+.instagram:hover {
+  color: var(--color-background);
+  cursor: pointer;
+}
+
+.icon {
+  background-color: var(--color-background);
+  border-radius: 4px;
+}
+
+.icon:hover {
+  background-color: var(--color-secondary);
+}
+
+.facebook, .instagram, .twitter {
+  display: inline-block;
+}

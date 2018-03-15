@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library
- * @version 1521061706820
+ * @version 1521119918742
  */
-const patternManifest_1521061706820 = {
+const patternManifest_1521119918742 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -518,8 +518,8 @@ const patternManifest_1521061706820 = {
       }
     },
     "icons": [
-      "facebook",
       "cancel",
+      "facebook",
       "cart",
       "instagram",
       "twitter",
@@ -528,18 +528,20 @@ const patternManifest_1521061706820 = {
       "cart",
       "facebook",
       "instagram",
-      "logo-32",
-      "logo-16",
-      "logo-64",
-      "logo-256",
       "next",
       "twitter",
       "cancel",
-      "cart",
       "facebook",
+      "cart",
       "instagram",
+      "next",
       "twitter",
-      "next"
+      "cancel",
+      "facebook",
+      "cart",
+      "instagram",
+      "next",
+      "twitter"
     ],
     "interfaceColours": {
       "primary": 255,
@@ -720,10 +722,25 @@ const patternManifest_1521061706820 = {
           "name": "footers",
           "namePretty": "Footers",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/footers/footers.html",
-          "localPath": "patterns/footers/footers.html"
+          "localPath": "patterns/footers/footers.html",
+          "readme": {
+            "backgroundcolor": "var(--color-background)",
+            "backgroundColour": "#f8f8f8",
+            "interfaceColours": {
+              "primary": 0,
+              "opposite": 255
+            }
+          }
         }
       ],
-      "md": [],
+      "md": [
+        {
+          "name": "readme",
+          "namePretty": "Readme",
+          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/footers/README.md",
+          "localPath": "patterns/footers/README.md"
+        }
+      ],
       "css": [
         {
           "name": "footers",
@@ -950,5 +967,5 @@ const patternManifest_1521061706820 = {
   }
 };
 
-patternBotIncludes(patternManifest_1521061706820);
+patternBotIncludes(patternManifest_1521119918742);
 }());
