@@ -1,0 +1,21 @@
+li {
+  display: inline-block;
+  color: var(--color-primary);
+}
+
+li:hover {
+  color: var(--color-secondary);
+  cursor: pointer;
+}
+
+.bread-crumbs {
+  color: var(--color-secondary);
+}
+
+.bread-crumbs:hover {
+  color: var(--color-primary);
+}
+
+.current {
+  color: var(--color-primary);
+}
