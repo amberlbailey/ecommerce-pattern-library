@@ -16,8 +16,15 @@ colors:
   accent: |
     This color is used for the background so it doesn't hurt the eye. This is used for the background but also for the banner and the navigation.
 
-backgroundColor: "#f8f8f8"
+backgroundColor: "var(--color-primary)"
 accentColor: "#62c7c7"
+
+brand:
+  colours:
+    backgroundcolor: "var(--color-background)"
+  typefaces:
+    backgroundcolor: "var(--color-background)"
+
 ---
 
 This company provides matching clothes for both humans and cats.
