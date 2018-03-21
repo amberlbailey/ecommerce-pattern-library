@@ -388,9 +388,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library
- * @version 1521602318791
+ * @version 1521665789478
  */
-const patternManifest_1521602318791 = {
+const patternManifest_1521665789478 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -549,6 +549,14 @@ const patternManifest_1521602318791 = {
             }
           }
         },
+        "icons": {
+          "backgroundcolor": "var(--color-background)",
+          "backgroundColour": "#f8f8f8",
+          "interfaceColours": {
+            "primary": 0,
+            "opposite": 255
+          }
+        },
         "backgroundColour": "#1e2424",
         "accentColour": "#62c7c7",
         "interfaceColours": {
@@ -560,30 +568,12 @@ const patternManifest_1521602318791 = {
       "bodyBasic": "This company provides matching clothes for both humans and cats."
     },
     "icons": [
-      "cancel",
-      "facebook",
       "cart",
-      "instagram",
-      "twitter",
-      "next",
-      "cancel",
-      "cart",
-      "facebook",
-      "instagram",
       "next",
       "twitter",
       "cancel",
       "facebook",
-      "cart",
-      "instagram",
-      "next",
-      "twitter",
-      "cancel",
-      "facebook",
-      "cart",
-      "instagram",
-      "next",
-      "twitter"
+      "instagram"
     ],
     "interfaceColours": {
       "primary": 255,
@@ -633,14 +623,15 @@ const patternManifest_1521602318791 = {
           "namePretty": "Call to action banner",
           "filename": "call-to-action-banner",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/banners/call-to-action-banner.html",
-          "localPath": "patterns/banners/call-to-action-banner.html"
-        },
-        {
-          "name": "divider-banner",
-          "namePretty": "Divider banner",
-          "filename": "divider-banner",
-          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/banners/divider-banner.html",
-          "localPath": "patterns/banners/divider-banner.html"
+          "localPath": "patterns/banners/call-to-action-banner.html",
+          "readme": {
+            "backgroundcolor": "var(--color-background)",
+            "backgroundColour": "#f8f8f8",
+            "interfaceColours": {
+              "primary": 0,
+              "opposite": 255
+            }
+          }
         }
       ],
       "md": [
@@ -729,7 +720,13 @@ const patternManifest_1521602318791 = {
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/cards/image-card-button.html",
           "localPath": "patterns/cards/image-card-button.html",
           "readme": {
-            "width": 300
+            "backgroundcolor": "var(--color-background)",
+            "width": 300,
+            "backgroundColour": "#f8f8f8",
+            "interfaceColours": {
+              "primary": 0,
+              "opposite": 255
+            }
           }
         },
         {
@@ -738,7 +735,15 @@ const patternManifest_1521602318791 = {
           "filename": "image-card",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/cards/image-card.html",
           "localPath": "patterns/cards/image-card.html",
-          "readme": {}
+          "readme": {
+            "backgroundcolor": "var(--color-background)",
+            "width": 300,
+            "backgroundColour": "#f8f8f8",
+            "interfaceColours": {
+              "primary": 0,
+              "opposite": 255
+            }
+          }
         },
         {
           "name": "product-card",
@@ -746,7 +751,15 @@ const patternManifest_1521602318791 = {
           "filename": "product-card",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/cards/product-card.html",
           "localPath": "patterns/cards/product-card.html",
-          "readme": {}
+          "readme": {
+            "backgroundcolor": "var(--color-background)",
+            "width": 300,
+            "backgroundColour": "#f8f8f8",
+            "interfaceColours": {
+              "primary": 0,
+              "opposite": 255
+            }
+          }
         }
       ],
       "md": [
@@ -1041,5 +1054,5 @@ const patternManifest_1521602318791 = {
   }
 };
 
-patternBotIncludes(patternManifest_1521602318791);
+patternBotIncludes(patternManifest_1521665789478);
 }());

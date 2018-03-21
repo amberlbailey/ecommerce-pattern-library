@@ -46,3 +46,7 @@ li a:hover {
 mark {
   background-color: var(--color-secondary);
 }
+
+#error {
+  background-color: var(--color-secondary);
+}

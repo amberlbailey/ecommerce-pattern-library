@@ -1,7 +1,7 @@
 .banner {
   background-color: var(--color-primary);
   color: var(--color-background);
-  height: 200vh;
+  max-height: 500px;
 }
 
 h1 {
