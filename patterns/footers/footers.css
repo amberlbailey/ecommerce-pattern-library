@@ -1,5 +1,4 @@
 .footer {
-  position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
@@ -12,29 +11,9 @@ p {
   color: var(--color-background);
 }
 
-#facebook {
-  color: var(--color-secondary);
-
-}
-
 .social {
   display: inline-block;
   color: var(--color-secondary);
-}
-
-.facebook:hover {
-  color: var(--color-background);
-  cursor: pointer;
-}
-
-.twitter:hover {
-  color: var(--color-background);
-  cursor: pointer;
-}
-
-.instagram:hover {
-  color: var(--color-background);
-  cursor: pointer;
 }
 
 .icon {
@@ -43,7 +22,8 @@ p {
 }
 
 .icon:hover {
-  background-color: var(--color-secondary);
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .facebook, .instagram, .twitter {
