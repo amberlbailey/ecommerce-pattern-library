@@ -101,7 +101,6 @@ const patternBotIncludes = function (manifest) {
     for (i = 0; i < t; i++) {
       if (rootMatcher.test(allScripts[i].src)) {
         return allScripts[i].src.split(rootMatcher)[0];
-        break;
       }
     }
   };
@@ -143,7 +142,7 @@ const patternBotIncludes = function (manifest) {
     let patternInfoJson;
     const data = patternElem.innerText.trim();
 
-    if (!data) return {}
+    if (!data) return {};
 
     try {
       patternInfoJson = JSON.parse(data);
@@ -172,9 +171,50 @@ const patternBotIncludes = function (manifest) {
     };
   };
 
+  const correctHrefPaths = function (html) {
+    const hrefSearch = /href\s*=\s*"\.\.\/\.\.\//g;
+    const srcSearch = /src\s*=\s*"\.\.\/\.\.\//g;
+    const urlSearch = /url\((["']*)\.\.\/\.\.\//g;
+
+    return html
+      .replace(hrefSearch, 'href="../')
+      .replace(srcSearch, 'src="../')
+      .replace(urlSearch, 'url($1../')
+    ;
+  };
+
+  const buildAccurateSelectorFromElem = function (elem) {
+    let theSelector = elem.tagName.toLowerCase();
+
+    if (elem.id) theSelector += `#${elem.id}`;
+    if (elem.getAttribute('role')) theSelector += `[role="${elem.getAttribute('role')}"]`;
+    if (elem.classList.length > 0) theSelector += `.${[].join.call(elem.classList, '.')}`;
+
+    theSelector += ':first-of-type';
+
+    return theSelector;
+  };
+
+  /**
+   * This is an ugly mess: Blink does not properly render SVGs when using DOMParser alone.
+   * But, I need DOMParser to determine the correct element to extract.
+   *
+   * I only want to get the first element within the `<body>` tag of the loaded document.
+   * This dumps the whole, messy, HTML document into a temporary `<div>`,
+   * then uses the DOMParser version, of the same element, to create an accurate selector,
+   * then finds that single element in the temporary `<div>` using the selector and returns it.
+   */
   const htmlStringToElem = function (html) {
+    let theSelector = '';
+    const tmpDoc = document.createElement('div');
+    const finalTmpDoc = document.createElement('div');
     const doc = (new DOMParser()).parseFromString(html, 'text/html');
-    return doc.body;
+
+    tmpDoc.innerHTML = html;
+    theSelector = buildAccurateSelectorFromElem(doc.body.firstElementChild);
+    finalTmpDoc.appendChild(tmpDoc.querySelector(theSelector));
+
+    return finalTmpDoc;
   };
 
   const replaceElementValue = function (elem, sel, data) {
@@ -197,7 +237,7 @@ const patternBotIncludes = function (manifest) {
 
     if (!patternDetails.html) return;
 
-    patternOutElem = htmlStringToElem(patternDetails.html);
+    patternOutElem = htmlStringToElem(correctHrefPaths(patternDetails.html));
     patternData = getPatternInfo(patternElem);
 
     Object.keys(patternData).forEach((sel) => {
@@ -234,7 +274,7 @@ const patternBotIncludes = function (manifest) {
   };
 
   const hideLoadingScreen = function () {
-    const allDownloadedInterval = setInterval(() => {
+    let allDownloadedInterval = setInterval(() => {
       if (Object.values(downloadedAssets).includes(false)) return;
 
       clearInterval(allDownloadedInterval);
@@ -272,7 +312,7 @@ const patternBotIncludes = function (manifest) {
           if (resp.status >= 200 && resp.status <= 299) {
             return resp.text();
           } else {
-            console.group('Cannot location pattern');
+            console.group('Cannot locate pattern');
             console.log(resp.url);
             console.log(`Error ${resp.status}: ${resp.statusText}`);
             console.groupEnd();
@@ -348,9 +388,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library
- * @version 1521119918742
+ * @version 1521602318791
  */
-const patternManifest_1521119918742 = {
+const patternManifest_1521602318791 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -515,7 +555,9 @@ const patternManifest_1521119918742 = {
           "primary": 255,
           "opposite": 0
         }
-      }
+      },
+      "bodyRaw": "\nThis company provides matching clothes for both humans and cats.\n",
+      "bodyBasic": "This company provides matching clothes for both humans and cats."
     },
     "icons": [
       "cancel",
@@ -589,12 +631,14 @@ const patternManifest_1521119918742 = {
         {
           "name": "call-to-action-banner",
           "namePretty": "Call to action banner",
+          "filename": "call-to-action-banner",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/banners/call-to-action-banner.html",
           "localPath": "patterns/banners/call-to-action-banner.html"
         },
         {
           "name": "divider-banner",
           "namePretty": "Divider banner",
+          "filename": "divider-banner",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/banners/divider-banner.html",
           "localPath": "patterns/banners/divider-banner.html"
         }
@@ -603,6 +647,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "readme",
           "namePretty": "Readme",
+          "filename": "README",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/banners/README.md",
           "localPath": "patterns/banners/README.md"
         }
@@ -611,6 +656,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "banners",
           "namePretty": "Banners",
+          "filename": "banners",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/banners/banners.css",
           "localPath": "patterns/banners/banners.css"
         }
@@ -624,6 +670,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "buttons",
           "namePretty": "Buttons",
+          "filename": "buttons",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/buttons/buttons.html",
           "localPath": "patterns/buttons/buttons.html",
           "readme": {
@@ -638,6 +685,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "icons",
           "namePretty": "Icons",
+          "filename": "icons",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/buttons/icons.html",
           "localPath": "patterns/buttons/icons.html",
           "readme": {
@@ -654,6 +702,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "readme",
           "namePretty": "Readme",
+          "filename": "README",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/buttons/README.md",
           "localPath": "patterns/buttons/README.md"
         }
@@ -662,6 +711,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "buttons",
           "namePretty": "Buttons",
+          "filename": "buttons",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/buttons/buttons.css",
           "localPath": "patterns/buttons/buttons.css"
         }
@@ -675,6 +725,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "image-card-button",
           "namePretty": "Image card button",
+          "filename": "image-card-button",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/cards/image-card-button.html",
           "localPath": "patterns/cards/image-card-button.html",
           "readme": {
@@ -684,6 +735,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "image-card",
           "namePretty": "Image card",
+          "filename": "image-card",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/cards/image-card.html",
           "localPath": "patterns/cards/image-card.html",
           "readme": {}
@@ -691,6 +743,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "product-card",
           "namePretty": "Product card",
+          "filename": "product-card",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/cards/product-card.html",
           "localPath": "patterns/cards/product-card.html",
           "readme": {}
@@ -700,6 +753,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "readme",
           "namePretty": "Readme",
+          "filename": "README",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/cards/README.md",
           "localPath": "patterns/cards/README.md"
         }
@@ -708,6 +762,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "cards",
           "namePretty": "Cards",
+          "filename": "cards",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/cards/cards.css",
           "localPath": "patterns/cards/cards.css"
         }
@@ -721,6 +776,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "footers",
           "namePretty": "Footers",
+          "filename": "footers",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/footers/footers.html",
           "localPath": "patterns/footers/footers.html",
           "readme": {
@@ -737,6 +793,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "readme",
           "namePretty": "Readme",
+          "filename": "README",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/footers/README.md",
           "localPath": "patterns/footers/README.md"
         }
@@ -745,6 +802,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "footers",
           "namePretty": "Footers",
+          "filename": "footers",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/footers/footers.css",
           "localPath": "patterns/footers/footers.css"
         }
@@ -758,6 +816,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "checkbox",
           "namePretty": "Checkbox",
+          "filename": "checkbox",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/forms/checkbox.html",
           "localPath": "patterns/forms/checkbox.html",
           "readme": {
@@ -772,6 +831,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "quantity-picker",
           "namePretty": "Quantity picker",
+          "filename": "quantity-picker",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/forms/quantity-picker.html",
           "localPath": "patterns/forms/quantity-picker.html",
           "readme": {
@@ -786,6 +846,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "radio-buttons",
           "namePretty": "Radio buttons",
+          "filename": "radio-buttons",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/forms/radio-buttons.html",
           "localPath": "patterns/forms/radio-buttons.html",
           "readme": {
@@ -800,6 +861,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "text-inputs",
           "namePretty": "Text inputs",
+          "filename": "text-inputs",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/forms/text-inputs.html",
           "localPath": "patterns/forms/text-inputs.html",
           "readme": {
@@ -816,6 +878,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "readme",
           "namePretty": "Readme",
+          "filename": "README",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/forms/README.md",
           "localPath": "patterns/forms/README.md"
         }
@@ -824,6 +887,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "forms",
           "namePretty": "Forms",
+          "filename": "forms",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/forms/forms.css",
           "localPath": "patterns/forms/forms.css"
         }
@@ -837,6 +901,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "headers",
           "namePretty": "Headers",
+          "filename": "headers",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/headers/headers.html",
           "localPath": "patterns/headers/headers.html"
         }
@@ -845,6 +910,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "readme",
           "namePretty": "Readme",
+          "filename": "README",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/headers/README.md",
           "localPath": "patterns/headers/README.md"
         }
@@ -853,6 +919,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "headers",
           "namePretty": "Headers",
+          "filename": "headers",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/headers/headers.css",
           "localPath": "patterns/headers/headers.css"
         }
@@ -866,6 +933,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "breadcrumbs",
           "namePretty": "Breadcrumbs",
+          "filename": "breadcrumbs",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/navigation/breadcrumbs.html",
           "localPath": "patterns/navigation/breadcrumbs.html",
           "readme": {
@@ -880,6 +948,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "next-and-previous-buttons",
           "namePretty": "Next and previous buttons",
+          "filename": "next-and-previous-buttons",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/navigation/next-and-previous-buttons.html",
           "localPath": "patterns/navigation/next-and-previous-buttons.html",
           "readme": {
@@ -896,6 +965,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "readme",
           "namePretty": "Readme",
+          "filename": "README",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/navigation/README.md",
           "localPath": "patterns/navigation/README.md"
         }
@@ -904,6 +974,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "navigation",
           "namePretty": "Navigation",
+          "filename": "navigation",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/navigation/navigation.css",
           "localPath": "patterns/navigation/navigation.css"
         }
@@ -917,6 +988,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "banner-like-sections",
           "namePretty": "Banner like sections",
+          "filename": "banner-like-sections",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/sections/banner-like-sections.html",
           "localPath": "patterns/sections/banner-like-sections.html",
           "readme": {
@@ -933,6 +1005,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "readme",
           "namePretty": "Readme",
+          "filename": "README",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/sections/README.md",
           "localPath": "patterns/sections/README.md"
         }
@@ -941,6 +1014,7 @@ const patternManifest_1521119918742 = {
         {
           "name": "section",
           "namePretty": "Section",
+          "filename": "section",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/sections/section.css",
           "localPath": "patterns/sections/section.css"
         }
@@ -967,5 +1041,5 @@ const patternManifest_1521119918742 = {
   }
 };
 
-patternBotIncludes(patternManifest_1521119918742);
+patternBotIncludes(patternManifest_1521602318791);
 }());
