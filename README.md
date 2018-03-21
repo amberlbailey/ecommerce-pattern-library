@@ -25,6 +25,9 @@ brand:
   typefaces:
     backgroundcolor: "var(--color-background)"
 
+icons:
+  backgroundcolor: "var(--color-background)"
+
 ---
 
 This company provides matching clothes for both humans and cats.
