@@ -22,6 +22,16 @@
   color: var(--color-background);
 }
 
-.icon:hover {
-  shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+.nxt, .can {
+  background-color: var(--color-secondary);
+}
+
+.nxt:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.can:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
 }
