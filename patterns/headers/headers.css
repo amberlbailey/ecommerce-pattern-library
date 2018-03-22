@@ -1,10 +1,8 @@
-/* Navbar container */
 .navbar {
   overflow: hidden;
   background-color: var(--color-primary);
 }
 
-/* Links inside the navbar */
 .navbar a {
   float: left;
   color: var(--color-background);
@@ -12,27 +10,23 @@
   text-decoration: none;
 }
 
-/* The dropdown container */
 .dropdown {
   float: left;
 }
 
-/* Dropdown button */
 .dropdown .dropbtn {
   border: none;
   outline: none;
   padding: 14px 16px;
   background-color: var(--color-primary);
-  margin: 0; /* Important for vertical align on mobile phones */
+  margin: 0;
 }
 
-/* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: var(--color-secondary);
   border-radius: 3px;
 }
 
-/* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -42,12 +36,10 @@
   z-index: 1;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Create three equal columns that floats next to each other */
 .column {
   float: left;
   width: 33.33%;
@@ -55,7 +47,6 @@
   max-height: 275px;
 }
 
-/* Style links inside the columns */
 .column a {
   float: none;
   color: var(--color-background);
@@ -64,25 +55,19 @@
   text-align: left;
 }
 
-/* Add a background color on hover */
 .column a:hover {
   background-color: var(--color-primary);
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 h3 {
   color: var(--color-background);
 }
 
-@media (max-width: 600px) {
+@media only screen and (min-width: 25em) {
+
   .column {
     width: 100%;
     height: auto;
   }
+
 }
