@@ -28,25 +28,19 @@ h2, h5, h6 {
   font-weight: var(--font-weight-normal);
 }
 
-a, cite, li {
-  color: #fff;
-  text-decoration: none;
-  list-style: none;
+a {
+  color: var(--color-background);
 }
 
-li {
+ul li {
   list-style-type: none;
 }
 
-li a:hover {
-  background-color: var(--color-secondary);
-  border-radius: 5px;
+ol li {
+  display: block;
+  list-style-type: bullets;
 }
 
 mark {
-  background-color: var(--color-secondary);
-}
-
-#error {
   background-color: var(--color-secondary);
 }
