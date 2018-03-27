@@ -10,11 +10,11 @@ fonts:
     Use the secondary typeface for headings and buttons.
 colors:
   primary: |
-    This primary color is used for the banner and for most of the body copy.
+    This primary color is used for the banner, header and footer. It is also the color for our text on a white background. Also, it's the hover color for our main button.
   secondary: |
-    This secondary color is used as an accent color. Use it as a hover and button color.
+    This secondary color is used as our accent and button color throughout the site. It is used as a hover for links, and ghost-buttons.
   accent: |
-    This color is used for the background so it doesn't hurt the eye. This is used for the background but also for the banner and the navigation.
+    This color is used for the background so it doesn't hurt the eye. This is used for the background but also for the text on our banner and the navigation.
 
 backgroundColor: "var(--color-primary)"
 accentColor: "#62c7c7"
