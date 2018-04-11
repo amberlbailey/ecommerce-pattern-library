@@ -227,6 +227,32 @@
           </li>
         </ul>
       </nav>
+        <hr>
+        <h2 class="italic kilo normal gutter push-1-2">Pages</h2>
+        <nav class="nav mega">
+          <ul class="list-group">
+              <li>
+                <a class="gutter pad-t-1-4 pad-b-1-4 block page-pop" href="pages/home.html" target="_blank">
+                  <div class="relative">
+                    <span>Home</span>
+                    <i class="icon i-18 absolute pin-cr">
+                      <svg><use xlink:href="#icon-pop-out" /></svg>
+                    </i>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="gutter pad-t-1-4 pad-b-1-4 block page-pop" href="pages/product-list.html" target="_blank">
+                  <div class="relative">
+                    <span>Product list</span>
+                    <i class="icon i-18 absolute pin-cr">
+                      <svg><use xlink:href="#icon-pop-out" /></svg>
+                    </i>
+                  </div>
+                </a>
+              </li>
+          </ul>
+        </nav>
     </header>
 
     <main class="main">
@@ -782,35 +808,18 @@
 
 </section>
 
-        <section class="pattern" id="banners" role="tabpanel" hidden aria-hidden="true" style="background-color:#f8f8f8; color:rgba(0,0,0,.9);">
-  <div class="pattern-toolbar gutter pad-t-1-4 pad-b-1-8 relative" style="border-color:rgba(0,0,0,.1); color:rgba(0,0,0,.9);">
-    <h2 class="pattern-name exa push-1-4" style=" font-family: ;">Banners</h2>
-        <ul class="list-group-inline gutter absolute pin-cr">
-            <li>
-              <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="banners-call-to-action-banner-code-sample">
-                <i class="icon i-18">
-                  <svg><use xlink:href="#icon-code"></use></svg>
-                </i>
-              </button>
-            </li>
-            <li>
-              <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="banners/call-to-action-banner" hidden>
-                <i class="icon i-18">
-                  <svg><use xlink:href="#icon-copy"></use></svg>
-                </i>
-              </button>
-            </li>
-            <li>
-              <a class="center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/banners/call-to-action-banner.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
-                <i class="icon i-18">
-                  <svg><use xlink:href="#icon-pop-out"></use></svg>
-                </i>
-              </a>
-            </li>
-        </ul>
+        <section class="pattern" id="banners" role="tabpanel" hidden aria-hidden="true" >
+  <div class="pattern-toolbar gutter pad-t-1-4 pad-b-1-8 relative" >
+    <h2 class="pattern-name exa push-1-4" style="color: #62c7c7; font-family: ;">Banners</h2>
+      <nav class="pattern-nav">
+        <ol class="list-group-inline push-1-4 pad-b-1-4">
+            <li><a href="#banners--call-to-action-banner">Call to action banner</a></li>
+            <li><a href="#banners--product-banner">Product banner</a></li>
+        </ol>
+      </nav>
   </div>
 
-    <div class="pattern-desc milli island" style="border-color:rgba(0,0,0,.05); color:rgba(0,0,0,.9);">
+    <div class="pattern-desc milli island" >
       <div class="max-length"><p>This will be the first thing the viewer sees on the home page. It is right below the navigation.</p>
 </div>
     </div>
@@ -818,6 +827,32 @@
   
 
     <div class="pattern-details pattern-details-has-bg" id="banners--call-to-action-banner" style="background-color:#f8f8f8;">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="border-color:rgba(0,0,0,.1); color:rgba(0,0,0,.9);">
+          <h3 class="pattern-name tera push-1-8">Call to action banner</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="banners-call-to-action-banner-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="banners/call-to-action-banner" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/banners/call-to-action-banner.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
 
       <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="color:rgb(0,0,0);">
         <div class="gutter-2 pad-t-1-2 pad-b-1-2">
@@ -846,12 +881,75 @@
                   <svg><use xlink:href="#icon-copy"></use></svg>
                 </i>
               </button>
-              <code><pre id="banners-call-to-action-banner-code-sample-copy-chunk">&lt;div class="banner island center-text"&gt;
-  &lt;h1 class="pad-t-2 push-0 tena">THE PURRFECT FIT&lt;/h1>
+              <code><pre id="banners-call-to-action-banner-code-sample-copy-chunk">&lt;div class="banner island text-center"&gt;
+  &lt;h1 class="pad-t-1-2 push-0 tena">THE PURRFECT FIT&lt;/h1>
   &lt;p class="milli">MATCHING CLOTHES FOR THE WHOLE FAMILY&lt;/p>
   &lt;div class="pad-b-1-2">
-    &lt;a class="btn btn-ghost" href="#" aria-label="click to learn more about the company">Learn More&lt;/a>
+    &lt;a class="button-ghost btn btn-ghost" href="#" aria-label="click to learn more about the company">Learn More&lt;/a>
   &lt;/div>
+&lt;/div>
+</pre></code>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="pattern-details " id="banners--product-banner" style="">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
+          <h3 class="pattern-name tera push-1-8">Product banner</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="banners-product-banner-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="banners/product-banner" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/banners/product-banner.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
+
+      <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
+        <div class="gutter-2 pad-t-1-2 pad-b-1-2">
+          <div class="resizeable-pattern relative" style="">
+            <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
+            <iframe data-src="patterns/banners/product-banner.html" scrolling="no" data-inject-css=" " ></iframe>
+              <div class="resizeable-pattern-length">
+                <div class="resize-handle resize-handle-left" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+                <div class="resize-handle resize-handle-right" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="banners-product-banner-code-sample" tabindex="-1">
+            <div class="pattern-code relative milli island-1-2" style="">
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#banners-product-banner-code-sample-copy-chunk" hidden>
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-copy"></use></svg>
+                </i>
+              </button>
+              <code><pre id="banners-product-banner-code-sample-copy-chunk">&lt;div class="banner island text-center"&gt;
+  &lt;h1 class="pad-t-1-2 push-0 giga">LOOKS THAT ARE FRESH OFF THE HOOK&lt;/h1>
 &lt;/div>
 </pre></code>
             </div>
@@ -1117,9 +1215,9 @@
                   <svg><use xlink:href="#icon-copy"></use></svg>
                 </i>
               </button>
-              <code><pre id="cards-image-card-button-code-sample-copy-chunk">&lt;div class="island card card-btn text-center"&gt;
-  &lt;img class="image img-flex" src="images/cat.jpg" alt="">
-  &lt;a class="btn milli" href="#" arialabel="click to shop our favourites">Shop Our Favourites&lt;/a>
+              <code><pre id="cards-image-card-button-code-sample-copy-chunk">&lt;div class="island-1-2 text-center container"&gt;
+  &lt;img src="../../images/cat.jpg" alt="">
+  &lt;a class="btn button milli" href="#" arialabel="click to shop our favourites">Shop Our Favourites&lt;/a>
 &lt;/div>
 </pre></code>
             </div>
@@ -1188,7 +1286,7 @@
               <code><pre id="cards-image-card-code-sample-copy-chunk">&lt;div class="island card"&gt;
   &lt;h5 class="push-0 kilo">LINDSAY&lt;/h5>
   &lt;h6 class="push-0">Founder&lt;/h6>
-  &lt;img class="image img-flex" src="images/founder.jpeg" alt="">
+  &lt;img class="image img-flex" src="../../images/founder.jpeg" alt="">
 &lt;/div>
 </pre></code>
             </div>
@@ -1254,10 +1352,10 @@
                   <svg><use xlink:href="#icon-copy"></use></svg>
                 </i>
               </button>
-              <code><pre id="cards-product-card-code-sample-copy-chunk">&lt;div class="island card"&gt;
-  &lt;img class="image img-flex" src="images/cat.jpg" alt="">
-  &lt;h3 class="push-0 kilo">Brushed Knit Turtleneck&lt;/h3>
-  &lt;p>$15.00&lt;/p>
+              <code><pre id="cards-product-card-code-sample-copy-chunk">&lt;div class="island card product"&gt;
+  &lt;img class="image img-flex overlay" src="../../images/cat.jpg" alt="">
+  &lt;h3 class="push-0 milli">Brushed Knit Turtleneck&lt;/h3>
+  &lt;p class="price">$15.00&lt;/p>
 &lt;/div>
 </pre></code>
             </div>
@@ -1331,13 +1429,13 @@
   &lt;p class="milli push-0 pad-b-1-2">&#xA9; 2018 | Off The Hook&lt;/p>
   &lt;div class="social">
     &lt;div class="gutter-1-2 facebook">
-      &lt;i class="icon i-32 gutter-1-2">&lt;svg class="social-media">&lt;use xlink:href="../../images/icons.svg#facebook"/>&lt;/svg>&lt;/i>
+      &lt;i class="icon icons i-32 gutter-1-2">&lt;svg class="social-media">&lt;use xlink:href="../../images/icons.svg#facebook"/>&lt;/svg>&lt;/i>
     &lt;/div>
     &lt;div class="gutter-1-2 instagram">
-      &lt;i class="icon i-32 gutter-1-2">&lt;svg>&lt;use xlink:href="../../images/icons.svg#instagram"/>&lt;/svg>&lt;/i>
+      &lt;i class="icon icons i-32 gutter-1-2">&lt;svg>&lt;use xlink:href="../../images/icons.svg#instagram"/>&lt;/svg>&lt;/i>
     &lt;/div>
     &lt;div class="gutter-1-2 twitter">
-      &lt;i class="icon i-32 gutter-1-2">&lt;svg>&lt;use xlink:href="../../images/icons.svg#twitter"/>&lt;/svg>&lt;/i>
+      &lt;i class="icon icons i-32 gutter-1-2">&lt;svg>&lt;use xlink:href="../../images/icons.svg#twitter"/>&lt;/svg>&lt;/i>
     &lt;/div>
   &lt;/div>
 &lt;/div>
@@ -1736,21 +1834,34 @@
                   <svg><use xlink:href="#icon-copy"></use></svg>
                 </i>
               </button>
-              <code><pre id="headers-headers-code-sample-copy-chunk">&lt;div class="nav"&gt;
-  &lt;div class="nav-wrapper">
-    &lt;ul>
-      &lt;li class="gutter-1-2">&lt;a href="#">Home&lt;/a>&lt;/li>
-      &lt;li class="gutter-1-2">&lt;a href="#">About Us&lt;/a>&lt;/li>
-      &lt;li class="gutter-1-2">&lt;a href="#">Female&lt;/a>
-        &lt;ul>
-          &lt;li class="gutter-1-2">&lt;a href="#">Tees and Tanks&lt;/a>&lt;/li>
-          &lt;li class="gutter-1-2">&lt;a href="#">Sweaters&lt;/a>&lt;/li>
+              <code><pre id="headers-headers-code-sample-copy-chunk">&lt;header class="navigation"&gt;
+  &lt;nav class="gutter-1-2 nav clear-fix ">
+    &lt;ul class="list-group-inline pad-t-1-2">
+      &lt;li>
+        &lt;a href="#">Home&lt;/a>
+      &lt;/li>
+      &lt;li class="drop">&lt;a class="current" href="#">Female&lt;/a>
+        &lt;ul class="list-group pad-b">
+          &lt;li>&lt;a href="#">Tees and Tanks&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#">Sweaters&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#">Pants&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#">Purses&lt;/a>&lt;/li>
         &lt;/ul>
       &lt;/li>
-      &lt;li class="gutter-1-2">&lt;a href="#">Male&lt;/a>&lt;/li>
+      &lt;li class=" drop">&lt;a href="#">Male&lt;/a>
+        &lt;ul class="list-group">
+          &lt;li>&lt;a href="#">Tees and Tanks&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#">Sweaters&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#">Pants&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#">Watches&lt;/a>&lt;/li>
+        &lt;/ul>
+      &lt;/li>
+      &lt;li>
+        &lt;a href="#">Cart&lt;/a>
+      &lt;/li>
     &lt;/ul>
-  &lt;/div>
-&lt;/div>
+  &lt;/nav>
+&lt;/header>
 </pre></code>
             </div>
           </div>
@@ -1828,11 +1939,10 @@
                   <svg><use xlink:href="#icon-copy"></use></svg>
                 </i>
               </button>
-              <code><pre id="navigation-breadcrumbs-code-sample-copy-chunk">&lt;ul class="bc-list list-group-inline"&gt;
-  &lt;li class="gutter-1-2 bread-crumbs">Home |&lt;/li>
-  &lt;li class="gutter-1-2 bread-crumbs">Female |&lt;/li>
-  &lt;li class="gutter-1-2 bread-crumbs">Human |&lt;/li>
-  &lt;li class="gutter-1-2 bread-crumbs current">Tees and Tanks |&lt;/li>
+              <code><pre id="navigation-breadcrumbs-code-sample-copy-chunk">&lt;ul class="bc-list list-group-inline gutter-2"&gt;
+  &lt;li class="gutter-1-2 bread-crumbs micro">Female |&lt;/li>
+  &lt;li class="gutter-1-2 bread-crumbs micro">Tees and Tanks |&lt;/li>
+  &lt;li class="gutter-1-2 bread-crumbs currents micro">Page 2 |&lt;/li>
 &lt;/ul>
 </pre></code>
             </div>
@@ -1894,13 +2004,13 @@
                   <svg><use xlink:href="#icon-copy"></use></svg>
                 </i>
               </button>
-              <code><pre id="navigation-next-and-previous-buttons-code-sample-copy-chunk">&lt;ul class="pn-list list-group-inline"&gt;
-  &lt;li class="gutter-2">Previous page&lt;/li>
-  &lt;li class="gutter-1-8">1&lt;/li>
-  &lt;li class="gutter-1-8">2&lt;/li>
-  &lt;li class="gutter-1-8">3&lt;/li>
-  &lt;li class="gutter-1-4">...10&lt;/li>
-  &lt;li class="gutter-2">Next Page&lt;/li>
+              <code><pre id="navigation-next-and-previous-buttons-code-sample-copy-chunk">&lt;ul class="pn-list list-group-inline text-center"&gt;
+  &lt;li class="gutter-1-2 milli">Previous page&lt;/li>
+  &lt;li class="gutter-1-8 milli">1&lt;/li>
+  &lt;li class="gutter-1-8 milli">2&lt;/li>
+  &lt;li class="gutter-1-8 milli">3&lt;/li>
+  &lt;li class="gutter-1-4 milli">...10&lt;/li>
+  &lt;li class="gutter-1-2 milli">Next Page&lt;/li>
 &lt;/ul>
 </pre></code>
             </div>
@@ -1970,11 +2080,11 @@
                   <svg><use xlink:href="#icon-copy"></use></svg>
                 </i>
               </button>
-              <code><pre id="sections-banner-like-sections-code-sample-copy-chunk">&lt;div class="grid grid-middle wrapper"&gt;
+              <code><pre id="sections-banner-like-sections-code-sample-copy-chunk">&lt;div class="pad-b-2 pad-t-2"&gt;
   &lt;div class="banner divide island">
-    &lt;div class="unit xs-1 s-1-2 m-1-2 l-1-2 xl-1-2">
-      &lt;h3 class="pad-t-2 push-0 tena">About&lt;/h3>
-      &lt;p class="milli">Started by a passionate cat lady who found that she wanted a closer bond with her cats. Off The Hook was hatched with the idea by Lindsay in 2004. As cats aren&#x2019;t just pets their part of the family and need to be dressed like a member of the family.&lt;/p>
+    &lt;div class="max-length">
+      &lt;h3 class="push-0 tena">About&lt;/h3>
+      &lt;p class="milli ">Started by a passionate cat lady who found that she wanted a closer bond with her cats. Off The Hook was hatched with the idea by Lindsay in 2004. As cats aren&#x2019;t just pets their part of the family and need to be dressed like a member of the family.&lt;/p>
     &lt;/div>
   &lt;/div>
 &lt;/div>
