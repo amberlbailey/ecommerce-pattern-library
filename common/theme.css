@@ -36,11 +36,6 @@ ul li {
   list-style-type: none;
 }
 
-ol li {
-  display: block;
-  list-style-type: bullets;
-}
-
 mark {
   background-color: var(--color-secondary);
 }
