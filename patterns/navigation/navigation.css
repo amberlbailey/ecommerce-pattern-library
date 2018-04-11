@@ -16,6 +16,10 @@ li:hover {
   color: var(--color-primary);
 }
 
-.current {
+.currents {
   color: var(--color-primary);
+}
+
+.pn-list {
+  min-width: 400px;
 }
