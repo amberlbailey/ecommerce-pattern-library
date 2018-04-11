@@ -1,21 +1,29 @@
-.card {
-  border-color: var(--color-secondary);
-  max-width: 300px;
+.container {
+  position: relative;
+  width: %50;
 }
 
-.card:hover {
-  border-color: var(--color-secondary);
+.container img {
+  width: 100%;
+  height: auto;
 }
 
-.btn {
-  background-color: var(--color-secondary);
-  border-color: var(--color-secondary);
-
-  color: var(--color-background);
-  border-radius: 15px;
-  min-width: 200px;
+.button {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(100%, -60%);
+  min-width: 240px;
 }
 
-.btn:hover {
-  background-color: var(--color-primary);
+.price {
+  color: var(--color-secondary);
+}
+
+.product {
+  cursor: pointer;
+}
+
+.overlay:hover {
+  opacity: 0.5;
+  background-color: rgba(0,0,255,0.5);
 }
