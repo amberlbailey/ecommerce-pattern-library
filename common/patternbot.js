@@ -388,9 +388,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library
- * @version 1522179199408
+ * @version 1523516825900
  */
-const patternManifest_1522179199408 = {
+const patternManifest_1523516825900 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -610,7 +610,23 @@ const patternManifest_1522179199408 = {
       "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/navigation",
       "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/sections"
     ],
-    "pages": []
+    "pages": [
+      {
+        "name": "checkout-form.html",
+        "namePretty": "Checkout form",
+        "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/pages/checkout-form.html"
+      },
+      {
+        "name": "home.html",
+        "namePretty": "Home",
+        "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/pages/home.html"
+      },
+      {
+        "name": "product-list.html",
+        "namePretty": "Product list",
+        "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/pages/product-list.html"
+      }
+    ]
   },
   "userPatterns": [
     {
@@ -632,6 +648,13 @@ const patternManifest_1522179199408 = {
               "opposite": 255
             }
           }
+        },
+        {
+          "name": "product-banner",
+          "namePretty": "Product banner",
+          "filename": "product-banner",
+          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/banners/product-banner.html",
+          "localPath": "patterns/banners/product-banner.html"
         }
       ],
       "md": [
@@ -674,19 +697,12 @@ const patternManifest_1522179199408 = {
           }
         },
         {
-          "name": "icons",
-          "namePretty": "Icons",
-          "filename": "icons",
-          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/buttons/icons.html",
-          "localPath": "patterns/buttons/icons.html",
-          "readme": {
-            "backgroundcolor": "var(--color-background)",
-            "backgroundColour": "#f8f8f8",
-            "interfaceColours": {
-              "primary": 0,
-              "opposite": 255
-            }
-          }
+          "name": "ghost-buttons",
+          "namePretty": "Ghost buttons",
+          "filename": "ghost-buttons",
+          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/buttons/ghost-buttons.html",
+          "localPath": "patterns/buttons/ghost-buttons.html",
+          "readme": {}
         }
       ],
       "md": [
@@ -754,6 +770,22 @@ const patternManifest_1522179199408 = {
           "readme": {
             "backgroundcolor": "var(--color-background)",
             "width": 300,
+            "backgroundColour": "#f8f8f8",
+            "interfaceColours": {
+              "primary": 0,
+              "opposite": 255
+            }
+          }
+        },
+        {
+          "name": "product-detail-card",
+          "namePretty": "Product detail card",
+          "filename": "product-detail-card",
+          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/cards/product-detail-card.html",
+          "localPath": "patterns/cards/product-detail-card.html",
+          "readme": {
+            "backgroundcolor": "var(--color-background)",
+            "width": 500,
             "backgroundColour": "#f8f8f8",
             "interfaceColours": {
               "primary": 0,
@@ -832,6 +864,21 @@ const patternManifest_1522179199408 = {
           "filename": "checkbox",
           "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/forms/checkbox.html",
           "localPath": "patterns/forms/checkbox.html",
+          "readme": {
+            "backgroundcolor": "var(--color-background)",
+            "backgroundColour": "#f8f8f8",
+            "interfaceColours": {
+              "primary": 0,
+              "opposite": 255
+            }
+          }
+        },
+        {
+          "name": "order-button",
+          "namePretty": "Order button",
+          "filename": "order-button",
+          "path": "/Amber/GD Year 2/Semester 2/Web Dev/ecommerce-pattern-library/patterns/forms/order-button.html",
+          "localPath": "patterns/forms/order-button.html",
           "readme": {
             "backgroundcolor": "var(--color-background)",
             "backgroundColour": "#f8f8f8",
@@ -1054,5 +1101,5 @@ const patternManifest_1522179199408 = {
   }
 };
 
-patternBotIncludes(patternManifest_1522179199408);
+patternBotIncludes(patternManifest_1523516825900);
 }());
