@@ -8,9 +8,12 @@ icons:
 
 buttons:
   description: |
-    - The main buttons are used through most of the website. They are used for the call to action buttons, cards and the navigation.
-    - The ghost button is used on the banner to stand out from the rest of our standard buttons.
+    - This main button is used through most of the website. They are used for the call to action buttons, cards and the navigation.
   backgroundcolor: "var(--color-background)"
+
+ghost-buttons:
+  description: |
+    - This ghost button is used on the banner to stand out from the rest of our standard buttons.
 ---
 
 The buttons use mostly our secondary color to contrast from our dark primary color

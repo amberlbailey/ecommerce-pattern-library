@@ -16,4 +16,10 @@ product-card:
     The product card is used to display all of our products found on both the male and female pages.
   backgroundcolor: "var(--color-background)"
   width: 300;
+
+product-detail-card:
+  description: |
+    The product card is used only on the product details page.
+  backgroundcolor: "var(--color-background)"
+  width: 500;
 ---
