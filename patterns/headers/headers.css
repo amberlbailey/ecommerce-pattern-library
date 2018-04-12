@@ -7,10 +7,6 @@ body {
   background-color: var(--color-primary);
 }
 
-.nav ul li ul li a {
-  padding: 8px 20px;
-}
-
 .nav ul {
   list-style-type: none;
   margin: 0;
@@ -58,5 +54,4 @@ body {
   border: 2px solid var(--color-secondary);
   border-radius: 4%;
   color: var(--color-background);
-
 }
