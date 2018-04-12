@@ -24,7 +24,7 @@ h6 {
   color: var(--color-secondary);
 }
 
-h2, h5, h6 {
+h2, h5, h6, p {
   font-weight: var(--font-weight-normal);
 }
 
