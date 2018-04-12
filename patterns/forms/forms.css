@@ -11,7 +11,7 @@ textarea {
 }
 
 input {
-  width: 15em;
+  width: 11em;
   border: 2px solid #62c7c7;
 }
 
@@ -47,4 +47,15 @@ input {
 
 [type="checkbox"]:checked + label::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256' viewBox='0 0 256 256'%3E%3Cpath fill='none' stroke='%2362c7c7' stroke-miterlimit='10' stroke-width='50' d='M49.9 130.1l50.8 50.7L206.1 75.2'/%3E%3C/svg%3E");
+}
+
+.btn-order {
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+  border: none;
+}
+
+.btn-order:hover {
+  background-color: var(--color-primary);
+  color: var(--color-background);
 }
