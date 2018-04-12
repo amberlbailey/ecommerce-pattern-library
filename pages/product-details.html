@@ -7,12 +7,25 @@
   <script src="../common/patternbot.js"></script>
 </head>
 <body>
-<script type="application/json" data-pattern="headers/headers">
-  {
-    ".current[class]": "gutter-1-2"
-  }
-</script>
-<script type="application/json" data-pattern="banners/product-banner"></script>
-
+  <script type="application/json" data-pattern="headers/headers">
+    {
+      ".current[class]": "gutter-1-2"
+    }
+  </script>
+  <script type="application/json" data-pattern="banners/product-banner"></script>
+  <section class="grid">
+    <div class="unit xs-1 m-1-2">
+      <script type="application/json" data-pattern="cards/product-detail-card"></script>
+    </div>
+    <div class="unit xs-1 m-1-2">
+      <div class="gutter pad-t">
+        <h3 class="push-1-2">Brushed Knit Turtleneck</h3>
+        <h3>$15.00</h3>
+      </div>
+      <script type="application/json" data-pattern="forms/quantity-picker"></script>
+      <script type="application/json" data-pattern="forms/radio-buttons"></script>
+      <script type="application/json" data-pattern="forms/order-button"></script>
+    </div>
+  </section>
 </body>
 </html>
