@@ -2,3 +2,20 @@
   background-color: var(--color-secondary);
   color: var(--color-background);
 }
+
+.button-ghost:hover {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  border-color: var(--color-background);
+  color: var(--color-background);
+}
+
+.btn-ghost:hover {
+  background-color: var(--color-background);
+  border-color: var(--color-background);
+  color: var(--color-primary);
+}
